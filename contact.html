@@ -90,7 +90,15 @@
 
       <div class="form-card reveal">
         <h3>Envoyez-nous un message</h3>
-        <form data-demo-form>
+        <!--
+          ENVOI RÉEL PAR E-MAIL (sans backend) via FormSubmit :
+          - action = https://formsubmit.co/ajax/VOTRE-EMAIL
+          - la 1ʳᵉ fois qu'un message est envoyé, FormSubmit adresse un
+            e-mail de confirmation à tchandodenise2@gmail.com : il faut
+            cliquer sur le lien "Activate Form" qu'il contient pour que
+            les envois suivants soient bien transmis.
+        -->
+        <form data-ajax-form action="https://formsubmit.co/ajax/tchandodenise2@gmail.com" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="c-nom">Nom complet</label>
@@ -109,6 +117,13 @@
             <label for="c-message">Message</label>
             <textarea id="c-message" name="message" placeholder="Écrivez votre message ici..." required></textarea>
           </div>
+
+          <!-- Réglages FormSubmit -->
+          <input type="hidden" name="_subject" value="Nouveau message de contact — Denise Maille">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
           <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">ENVOYER LE MESSAGE <i class="fa-solid fa-paper-plane"></i></button>
           <p class="form-feedback"></p>
         </form>

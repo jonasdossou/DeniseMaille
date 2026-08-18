@@ -49,7 +49,6 @@
       </nav>
 
       <div class="header-actions">
-        </a>
         <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menu Mobile" aria-expanded="false">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -105,7 +104,15 @@
     <div class="container order-layout">
       <div class="form-card reveal">
         <h3>Décrivez votre commande</h3>
-        <form data-demo-form>
+        <!--
+          ENVOI RÉEL PAR E-MAIL (sans backend) via FormSubmit :
+          - action = https://formsubmit.co/ajax/VOTRE-EMAIL
+          - la 1ʳᵉ fois qu'un message est envoyé, FormSubmit adresse un
+            e-mail de confirmation à tchandodenise2@gmail.com : il faut
+            cliquer sur le lien "Activate Form" qu'il contient pour que
+            les envois suivants soient bien transmis.
+        -->
+        <form data-ajax-form action="https://formsubmit.co/ajax/tchandodenise2@gmail.com" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="nom">Nom complet</label>
@@ -139,6 +146,13 @@
             <textarea id="description" name="description"
               placeholder="Modèle souhaité, couleurs, taille, occasion, délai..." required></textarea>
           </div>
+
+          <!-- Réglages FormSubmit -->
+          <input type="hidden" name="_subject" value="Nouvelle demande de commande — Denise Maille">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
           <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">ENVOYER MA DEMANDE
             <i class="fa-solid fa-paper-plane"></i></button>
           <p class="form-feedback"></p>

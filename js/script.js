@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
      Slider du hero (points)
   --------------------------------------------------------------------- */
   const dots = document.querySelectorAll('.slider-dots .dot');
-  dots.forEach((dot, i) => {
+  dots.forEach((dot) => {
     dot.addEventListener('click', () => {
       dots.forEach(d => d.classList.remove('active'));
       dot.classList.add('active');
@@ -134,17 +134,63 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------------------------------------------------------------------
-     Formulaires (Commander / Contact) — démo sans backend
+     Formulaires (Commander / Contact) — ENVOI RÉEL par e-mail
+     via FormSubmit (https://formsubmit.co), sans aucun serveur/backend.
+     L'adresse de destination et le sujet sont définis directement dans
+     le HTML (attribut "action" du <form> + champ caché "_subject"),
+     ce script se charge uniquement d'envoyer les données en AJAX et
+     d'afficher un message de confirmation ou d'erreur sans recharger
+     la page.
   --------------------------------------------------------------------- */
-  document.querySelectorAll('form[data-demo-form]').forEach((form) => {
-    form.addEventListener('submit', (e) => {
+  document.querySelectorAll('form[data-ajax-form]').forEach((form) => {
+    const feedback = form.querySelector('.form-feedback');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const btnDefaultHTML = submitBtn ? submitBtn.innerHTML : '';
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const feedback = form.querySelector('.form-feedback');
-      if (feedback) {
-        feedback.textContent = "Merci ! Votre message a bien été reçu, nous vous répondrons très vite.";
-        feedback.classList.add('show');
+
+      // Piège à robots (champ caché "_honey") : si rempli, on ignore l'envoi
+      const honey = form.querySelector('input[name="_honey"]');
+      if (honey && honey.value) return;
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Envoi en cours...';
       }
-      form.reset();
+      if (feedback) {
+        feedback.classList.remove('show');
+        feedback.style.backgroundColor = '';
+        feedback.style.color = '';
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Réponse invalide du serveur');
+
+        if (feedback) {
+          feedback.textContent = "Merci ! Votre message a bien été envoyé, nous vous répondrons très vite.";
+          feedback.classList.add('show');
+        }
+        form.reset();
+      } catch (err) {
+        if (feedback) {
+          feedback.textContent = "Une erreur est survenue lors de l'envoi. Merci de réessayer, ou de nous écrire directement sur WhatsApp.";
+          feedback.style.backgroundColor = 'rgba(168, 90, 46, 0.12)';
+          feedback.style.color = 'var(--rust-deep, #7C3F1D)';
+          feedback.classList.add('show');
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = btnDefaultHTML;
+        }
+      }
     });
   });
 });
