@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commander — Denise Maille</title>
+  <meta name="description"
+    content="Passez commande auprès de Denise Maille : décrivez votre projet, choisissez vos options et recevez votre création tricotée main.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,600;0,700;1,400;1,500&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-text"><i class="fa-regular fa-heart"></i> Livraison disponible
+        partout&nbsp;&nbsp;|&nbsp;&nbsp;Fait main avec amour</div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <img src="images/produits/logo denise mail marron.png" alt="">
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">ACCUEIL</a></li>
+          <li><a href="apropos.html">À PROPOS</a></li>
+          <li class="dropdown">
+            <a href="collections.html">COLLECTIONS <i class=""></i></a>
+          </li>
+
+          <li><a href="commander.html" class="active">COMMANDER</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        </a>
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menu Mobile" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> <i class="fa-solid fa-chevron-right"></i> Commander</div>
+      <h1 class="page-title">Passer commande</h1>
+      <p class="page-lead">Décrivez votre projet en quelques mots, nous nous occupons du reste — de la première maille à
+        la livraison.</p>
+    </div>
+  </section>
+
+  <!-- Étapes -->
+  <section class="collections-section" style="padding-bottom:50px;">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="title-wrapper">
+          <span class="section-subtitle">COMMENT ÇA MARCHE</span>
+          <h2 class="section-title">4 étapes, une pièce unique</h2>
+        </div>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-number">1</div>
+          <h3>Vous décrivez votre envie</h3>
+          <p>Modèle, taille, couleur, budget : remplissez le formulaire ci-dessous.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-number">2</div>
+          <h3>Nous vous répondons</h3>
+          <p>Sous 24 à 48h, avec un devis clair et un délai de réalisation.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-number">3</div>
+          <h3>Nous tricotons</h3>
+          <p>Votre pièce est réalisée à la main, point par point, à l'atelier.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-number">4</div>
+          <h3>Livraison chez vous</h3>
+          <p>Remise en main propre à Parakou ou envoi partout ailleurs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulaire + résumé -->
+  <section class="split-block" style="background-color:var(--paper); padding-top:0;" id="paiement">
+    <div class="container order-layout">
+      <div class="form-card reveal">
+        <h3>Décrivez votre commande</h3>
+        <form data-demo-form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom complet</label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+              <label for="telephone">Téléphone / WhatsApp</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="+229 01 23 45 67 89" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Adresse e-mail</label>
+              <input type="email" id="email" name="email" placeholder="vous@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="categorie">Catégorie souhaitée</label>
+              <select id="categorie" name="categorie">
+                <option>Pull</option>
+                <option>Gilet</option>
+                <option>Écharpe</option>
+                <option>Bonnet</option>
+                <option>Sac</option>
+                <option>Accessoire</option>
+                <option>Autre / sur mesure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="description">Décrivez votre projet</label>
+            <textarea id="description" name="description"
+              placeholder="Modèle souhaité, couleurs, taille, occasion, délai..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">ENVOYER MA DEMANDE
+            <i class="fa-solid fa-paper-plane"></i></button>
+          <p class="form-feedback"></p>
+        </form>
+      </div>
+
+      <div class="summary-card reveal">
+        <h3>Bon à savoir</h3>
+        <ul class="summary-list">
+          <li><i class="fa-solid fa-clock"></i> Réponse à votre demande sous 24 à 48h.</li>
+          <li><i class="fa-solid fa-ruler"></i> Toutes les tailles sont réalisables sur mesure.</li>
+          <li><i class="fa-solid fa-truck"></i> Livraison à Cotonou ou envoi national/international.</li>
+          <li><i class="fa-solid fa-rotate-left"></i> Retouches possibles après réception.</li>
+        </ul>
+        <h3 style="margin-top:24px;">Moyens de paiement</h3>
+        <div class="payment-methods">
+          <span class="payment-badge"><i class="fa-brands fa-whatsapp"></i> Mobile Money</span>
+          <span class="payment-badge"><i class="fa-solid fa-money-bill-wave"></i> Espèces</span>
+          <span class="payment-badge"><i class="fa-solid fa-credit-card"></i> Carte bancaire</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="collections-section">
+    <div class="container" style="max-width:820px;">
+      <div class="section-header reveal" style="justify-content:center; text-align:center; flex-direction:column;">
+        <span class="section-subtitle" style="justify-content:center;">QUESTIONS FRÉQUENTES </span>
+        <h2 class="section-title">Vous vous demandez peut-être...</h2>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">Combien de temps prend une commande sur mesure ? <i
+            class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">
+          <p>En général entre 5 et 15 jours selon la complexité du modèle et notre charge d'atelier au moment de la
+            commande.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">Livrez-vous en dehors du Bénin ? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">
+          <p>Oui, nous expédions partout où vous êtes. Les frais et délais de livraison vous seront communiqués avec
+            votre devis.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">Puis-je choisir mes propres coloris ? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">
+          <p>Bien sûr. Indiquez vos couleurs préférées dans le formulaire, nous vous confirmerons leur disponibilité.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">Un acompte est-il demandé ? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer">
+          <p>Oui, un acompte est généralement demandé à la validation du devis, le solde étant réglé à la livraison.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <a href="index.html" class="footer-logo">
+          <img src="images/produits/Blanc logo denise mail blanc.png" alt="">
+        </a>
+        <p class="footer-desc">Nous créons des pièces uniques en maille, tricotées à la main avec passion et
+          savoir-faire, depuis Parakou.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">LIENS RAPIDES</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="commander.html">Commander</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">NOS SERVICES</h4>
+        <ul class="footer-services">
+          <li><i class="fa-solid fa-wand-magic-sparkles"></i> Créations sur mesure</li>
+          <li><i class="fa-solid fa-rotate-left"></i> Commandes personnalisées</li>
+          <li><i class="fa-solid fa-truck"></i> Livraison rapide</li>
+          <li><a href="commander.html#paiement" class="footer-service-link"><i class="fa-solid fa-lock"></i> Paiement
+              sécurisé</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">CONTACTEZ-NOUS</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-phone"></i> +229 01 59 20 68 89</li>
+          <li><i class="fa-brands fa-whatsapp"></i> +229 01 59 20 68 89</li>
+          <li><i class="fa-regular fa-envelope"></i> tchandodenise2@gmail.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> Parakou, Bénin</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sub-footer">
+      <div class="container">
+        <p>&copy; 2026 Denise Maille — Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

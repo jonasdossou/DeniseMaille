@@ -1,0 +1,66 @@
+DENISE MAILLE — notes de livraison
+===================================
+
+CE QUI A CHANGÉ (résumé)
+-------------------------
+- Nouvelle identité visuelle : palette terracotta / sauge profonde / moutarde
+  sur fond lin, typographies Fraunces (titres) + Work Sans (texte).
+- Signature de marque : le "point de maille", une ligne cousue en forme de
+  mailles (SVG) réutilisée comme séparateur, soulignement de menu actif et
+  puce de section sur TOUTES les pages.
+- Logo redessiné en SVG (pelote + aiguilles stylisées).
+- Les cartes produits utilisent des aplats colorés texturés (motif de
+  mailles en filigrane) + icône, en attendant vos vraies photos.
+- Menu mobile qui glisse depuis la droite, apparition douce des sections au
+  scroll, en-tête qui s'ombre légèrement au scroll, respect de
+  "prefers-reduced-motion".
+
+PAGES CRÉÉES
+-------------------------
+- index.html         Accueil
+- apropos.html       Histoire, valeurs, timeline de l'atelier
+- collections.html   Grille produits complète, groupée par catégorie
+                      (ancres #pulls #gilets #echarpes #bonnets #sacs
+                      #accessoires, reliées au menu déroulant)
+- realisations.html  Galerie de créations / commandes sur mesure
+- commander.html     Étapes de commande, formulaire, moyens de paiement,
+                      FAQ (ancre #paiement reliée au footer)
+- blog.html          Grille d'articles (contenu à rédiger)
+- contact.html        Coordonnées, formulaire, carte Google Maps intégrée,
+                      FAQ courte
+
+Toutes les pages partagent le même header, footer, la même charte et le
+même fichier js/script.js (menu mobile, slider témoignages sur l'accueil,
+accordéon FAQ, formulaires de démonstration, apparition au scroll).
+
+À FAIRE DE VOTRE CÔTÉ
+-------------------------
+1. Contenu réel : les textes (articles de blog, description des étapes de
+   l'atelier, avis clients) sont des exemples à adapter à votre histoire
+   réelle.
+2. Photos : le hero utilise une image libre de droits (Unsplash) en
+   attendant vos propres photos. Le dossier images/produits/ est prêt à
+   recevoir vos visuels si vous préférez des photos aux aplats colorés —
+   dites-le moi et je réintègre des cartes photo dans les grilles.
+3. Formulaires (commander.html, contact.html) : ce sont des démonstrations
+   côté navigateur (aucun envoi réel). Pour recevoir les messages, il faut
+   les relier à un service comme Formspree, EmailJS, ou à votre propre
+   backend.
+4. Carte Google Maps (contact.html) : actuellement centrée sur "Cotonou,
+   Bénin" en général ; remplacez par l'adresse exacte de votre atelier.
+
+STRUCTURE
+-------------------------
+Denise_Maille/
+├── index.html
+├── apropos.html
+├── collections.html
+├── realisations.html
+├── commander.html
+├── blog.html
+├── contact.html
+├── css/style.css        (variables, composants, mise en page, toutes pages)
+├── css/responsive.css   (mobile / tablette, toutes pages)
+├── css/animations.css   (keyframes, apparition au scroll)
+├── js/script.js         (menu, slider, FAQ, formulaires, scroll reveal)
+└── images/               (à compléter avec vos photos)

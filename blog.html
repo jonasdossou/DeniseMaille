@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Denise Maille</title>
+  <meta name="description" content="Conseils d'entretien, coulisses de l'atelier et actualités de Denise Maille, atelier de tricot artisanal à Cotonou.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,600;0,700;1,400;1,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-text"><i class="fa-regular fa-heart"></i> Livraison disponible partout&nbsp;&nbsp;|&nbsp;&nbsp;Fait main avec amour</div>
+      <div class="top-bar-socials">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="21.5" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 24c4-8 8-8 14-8s10 0 14 8c-4 8-8 8-14 8s-10 0-14-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M24 16v16M17 19l14 10M31 19 17 29" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <div class="logo-text">
+          <span class="brand-title">DENISE</span>
+          <span class="brand-subtitle">Maille</span>
+          <span class="brand-tagline">L'art de la main, la passion du fil</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">ACCUEIL</a></li>
+          <li><a href="apropos.html">À PROPOS</a></li>
+          <li class="dropdown">
+            <a href="collections.html">COLLECTIONS <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="collections.html#pulls">Pulls & Gilets</a></li>
+              <li><a href="collections.html#echarpes">Écharpes & Bonnets</a></li>
+              <li><a href="collections.html#accessoires">Sacs & Accessoires</a></li>
+            </ul>
+          </li>
+          <li><a href="realisations.html">RÉALISATIONS</a></li>
+          <li><a href="commander.html">COMMANDER</a></li>
+          <li><a href="blog.html" class="active">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-btn" aria-label="Rechercher"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="commander.html" class="action-btn cart-btn" aria-label="Panier">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menu Mobile" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> <i class="fa-solid fa-chevron-right"></i> Blog</div>
+      <h1 class="page-title">Le blog de l'atelier</h1>
+      <p class="page-lead">Conseils d'entretien, coulisses de la création et actualités de Denise Maille.</p>
+    </div>
+    <div class="stitch-line stitch-line--rust"></div>
+  </section>
+
+  <section class="collections-section">
+    <div class="container">
+      <div class="blog-grid">
+        <a href="#" class="blog-card reveal">
+          <div class="blog-thumb swatch-1"><i class="fa-solid fa-droplet"></i></div>
+          <div class="blog-info">
+            <span class="blog-meta">Entretien · 12 min</span>
+            <h3>Comment laver un pull en laine sans l'abîmer</h3>
+            <p>Nos gestes simples pour garder vos créations douces et sans peluches, saison après saison.</p>
+            <span class="blog-read">Lire l'article <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="blog-card reveal">
+          <div class="blog-thumb swatch-3"><i class="fa-solid fa-yarn"></i></div>
+          <div class="blog-info">
+            <span class="blog-meta">Savoir-faire · 8 min</span>
+            <h3>Dans les coulisses de l'atelier Denise Maille</h3>
+            <p>Une journée type avec nos artisanes, du choix du fil à la dernière maille rentrée.</p>
+            <span class="blog-read">Lire l'article <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="blog-card reveal">
+          <div class="blog-thumb swatch-5"><i class="fa-solid fa-palette"></i></div>
+          <div class="blog-info">
+            <span class="blog-meta">Style · 6 min</span>
+            <h3>3 façons de porter l'écharpe torsadée cet hiver</h3>
+            <p>De la version décontractée à la version soirée, notre écharpe signature s'adapte à tout.</p>
+            <span class="blog-read">Lire l'article <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="blog-card reveal">
+          <div class="blog-thumb swatch-2"><i class="fa-solid fa-gift"></i></div>
+          <div class="blog-info">
+            <span class="blog-meta">Idées cadeaux · 5 min</span>
+            <h3>Que offrir en maille pour les fêtes ?</h3>
+            <p>Notre sélection de pièces à offrir, selon les goûts et les budgets.</p>
+            <span class="blog-read">Lire l'article <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="blog-card reveal">
+          <div class="blog-thumb swatch-6"><i class="fa-solid fa-seedling"></i></div>
+          <div class="blog-info">
+            <span class="blog-meta">Engagement · 7 min</span>
+            <h3>Pourquoi choisir des fils de qualité durable</h3>
+            <p>Notre démarche pour sélectionner des matières qui traversent le temps.</p>
+            <span class="blog-read">Lire l'article <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="blog-card reveal">
+          <div class="blog-thumb swatch-4"><i class="fa-solid fa-ruler"></i></div>
+          <div class="blog-info">
+            <span class="blog-meta">Guide · 9 min</span>
+            <h3>Bien prendre ses mesures pour une commande sur mesure</h3>
+            <p>Le guide pas à pas pour nous transmettre les bonnes mesures dès la première fois.</p>
+            <span class="blog-read">Lire l'article <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="stitch-line stitch-line--gold"></div>
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <a href="index.html" class="footer-logo">
+          <svg class="logo-icon-foot" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="21.5" stroke="currentColor" stroke-width="2"/>
+            <path d="M10 24c4-8 8-8 14-8s10 0 14 8c-4 8-8 8-14 8s-10 0-14-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M24 16v16M17 19l14 10M31 19 17 29" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          <div class="logo-text">
+            <span class="brand-title">DENISE</span>
+            <span class="brand-subtitle">Maille</span>
+          </div>
+        </a>
+        <p class="footer-tagline">L'art de la main, la passion du fil</p>
+        <p class="footer-desc">Nous créons des pièces uniques en maille, tricotées à la main avec passion et savoir-faire, depuis Cotonou.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">LIENS RAPIDES</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="commander.html">Commander</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">NOS SERVICES</h4>
+        <ul class="footer-services">
+          <li><i class="fa-solid fa-wand-magic-sparkles"></i> Créations sur mesure</li>
+          <li><i class="fa-solid fa-rotate-left"></i> Commandes personnalisées</li>
+          <li><i class="fa-solid fa-truck"></i> Livraison rapide</li>
+          <li><a href="commander.html#paiement" class="footer-service-link"><i class="fa-solid fa-lock"></i> Paiement sécurisé</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">CONTACTEZ-NOUS</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-phone"></i> +229 01 23 45 67 89</li>
+          <li><i class="fa-brands fa-whatsapp"></i> +229 01 23 45 67 89</li>
+          <li><i class="fa-regular fa-envelope"></i> contact@denisemaille.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> Cotonou, Bénin</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">SUIVEZ-NOUS</h4>
+        <div class="footer-social-icons">
+          <a href="#" class="social-box" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-box" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-box" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="sub-footer"><div class="container"><p>&copy; 2026 Denise Maille — Tous droits réservés.</p></div></div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
